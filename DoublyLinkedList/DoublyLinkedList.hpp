@@ -54,8 +54,8 @@ public:
 	iterator begin();
 	iterator end();
 
-	const_iterator cbegin();
-	const_iterator cend();
+	const_iterator cbegin() const;
+	const_iterator cend() const;
 
 	const_iterator begin() const;
 	const_iterator end() const;
@@ -310,12 +310,12 @@ inline typename DoublyLinkedList<T>::iterator DoublyLinkedList<T>::end() {
 }
 
 template <typename T>
-inline typename DoublyLinkedList<T>::const_iterator DoublyLinkedList<T>::cbegin() {
+inline typename DoublyLinkedList<T>::const_iterator DoublyLinkedList<T>::cbegin() const {
 	return const_iterator(head->next);
 }
 
 template <typename T>
-inline typename DoublyLinkedList<T>::const_iterator DoublyLinkedList<T>::cend() {
+inline typename DoublyLinkedList<T>::const_iterator DoublyLinkedList<T>::cend() const {
 	return const_iterator(tail);
 }
 
