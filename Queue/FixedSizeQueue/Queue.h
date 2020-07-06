@@ -1,6 +1,6 @@
 #pragma once
-#ifndef FIXEDm_size_QUEUE_HEADER
-#define FIXEDm_size_QUEUE_HEADER
+#ifndef FIXED_SIZE_QUEUE_HEADER
+#define FIXED_SIZE_QUEUE_HEADER
 
 #include <stdexcept>
 
@@ -181,4 +181,4 @@ inline void swap(Queue<T> &lhs, Queue<T> &rhs) {
 	lhs.swap(rhs);
 }
 
-#endif // !FIXEDm_size_QUEUE_HEADER
+#endif // !FIXED_SIZE_QUEUE_HEADER
