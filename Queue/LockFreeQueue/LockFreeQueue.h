@@ -23,7 +23,7 @@ class Queue {
 
 	// We keep the number of external counters and an internal count in each Node. 
 	struct NodeCounter {
-		int m_internalCount : 30;				// Every time the reader releases the pointer(CountedNodePtr), this count is deacreased by 1.
+		signed int m_internalCount : 30;	// Every time the reader releases the pointer(CountedNodePtr), this count is deacreased by 1.
 		unsigned int m_externalCounters : 2;	// There are at most 2 external counters. We need no more than 2 bits.
 	};
 
