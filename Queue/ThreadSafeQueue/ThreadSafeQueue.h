@@ -6,8 +6,8 @@
 #include <memory>				// Smart pointers.
 #include <limits>				// The maximum value of the capacity.
 #include <atomic>				// Number of elements in the queue.
-#include <stdexcept>			// Exceptions.
-#include <condition_variable>	// Wait for pop() and push().
+#include <stdexcept>				// Exceptions.
+#include <condition_variable>			// Wait for pop() and push().
 
 template <typename T>
 class ThreadSafeQueue {
