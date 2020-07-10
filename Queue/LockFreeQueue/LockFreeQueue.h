@@ -148,13 +148,13 @@ inline void Queue<T>::push(const T &value) {
 			// The default constructed dummy value.
 			CountedNodePtr old_next;
 
-			// If another thread changed m_next.
+			// If another thread has changed m_next.
 			if (!old_tail.m_ptr->m_next.compare_exchange_strong(old_next, new_next)) {
 				
 				// We no longer need the old value.
 				delete new_next.m_ptr;
 
-				// Update new_next with the value that the other thread used.
+				// Update new_next with the value that the other thread has used.
 				new_next = old_next;
 			}
 
